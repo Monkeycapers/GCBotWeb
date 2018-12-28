@@ -1,0 +1,86 @@
+html,
+body {
+    /* background-color: #212121; */
+    /* color: white; */
+}
+
+.navbar {
+     background-color:#212121;
+     border-bottom: 1px #ebebeb solid; 
+     color:white;
+}
+
+.postcomments-text textarea {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    /* border: 1px solid rgb(34, 34, 34); */
+}
+
+.logosub {
+    color: #E0E0E0;
+}
+
+.navbar a:hover {
+    color: #45e2f7;
+}
+
+#projects-dropdown {
+    background-color: #212121;
+}
+
+#small-nav {
+    background-color: #212121;
+    color: white;
+}
+
+#small-menu div {
+    background-color: #212121;
+    color: white;
+}
+
+#small-menu div a {
+    color:white;
+}
+
+.selected {
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+}
+
+.posttitle {
+    color:black;
+    font-weight: bold;
+}
+
+.postdate p {
+    color: gray;
+}
+
+.button {
+    color: #45a8d3;
+    border: 1px #45a8d3 solid;
+}
+
+.button:hover {
+    color: white;
+    background-color: #45a8d3;
+}
+
+.tag, .tag:visited {
+    background-color: rgb(222, 222, 222);
+    color: black;
+}
+
+.split {
+    border-bottom: 4px black solid;
+}
+
+.searchinput input {
+    color: black;
+    border: none;
+    border-bottom: 1px #ebebeb solid;
+}

@@ -1,0 +1,114 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Roboto', sans-serif; */
+    background-color: #fbfbfb;
+}
+
+#main-container {
+    margin-top: 50px;
+    width:70%;
+    margin-left: 15%;
+}
+
+#header {
+    border-bottom: 2px black solid;
+    width: 100%;
+    display: inline-block;
+}
+
+#styleimage {
+    height: 75px;
+}
+
+#otherimage {
+    height: 75px;
+}
+
+#headphonesimage {
+    height: 75px;
+}
+
+#gcbot {
+    font-size: 50px;
+    text-align: center;
+    float: left;
+}
+
+#gcbot-sub {
+    font-size: 15px;
+    color:   #353535;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.githubimage {
+    margin-top: 25px;
+}
+
+#github {
+    align-self: flex-end;
+    float: right;
+}
+
+.promo-image {
+    text-align: center;
+}
+
+.promo-item {
+    border-right: 1px #c9c9c9 solid;
+    padding: 25px;
+    flex: 1 1 0;
+    text-align: middle;
+}
+
+#promo {
+    display:flex;
+    margin-top: 0;
+    width: 100%;
+}
+
+#promo3 {
+    border-right: 0;
+}
+
+#content {
+    margin-top: 0px;
+}
+
+#content-wrapper {
+    display:flex;
+    height: 500px;
+    margin-top: 25px;
+}
+
+#main-content {
+    float: left;
+    width: 70%;
+}
+
+#side-content {
+    float:right;
+    width:30%;
+}
+
+.side-header {
+    font-size: 30px;
+    width: 100%;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.main-header {
+    font-size: 30px;
+    width: 100%;
+    padding-left: 0px;
+    margin: 0;
+}
+
+.spacer {
+    width: 3px;
+    height: 1px;
+}
