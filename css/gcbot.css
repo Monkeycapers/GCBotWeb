@@ -86,7 +86,7 @@ body {
 
 #main-content {
     float: left;
-    width: 70%;
+    width: 100%;
 }
 
 #side-content {
@@ -106,9 +106,64 @@ body {
     width: 100%;
     padding-left: 0px;
     margin: 0;
+    text-align: center;
 }
 
 .spacer {
     width: 3px;
     height: 1px;
+}
+
+.featurelist {
+    padding-left: 13px;
+}
+
+#features {
+    margin-top: 25px;
+}
+
+#features-left {
+    display: inline;
+}
+
+#features-right {
+    float: left;
+    margin-left: 10%;
+}
+
+.featurelist {
+    width: auto;
+    float: left;
+}
+
+#playerimage {
+    display: inline-block;
+    height: 300px;
+    margin-left: 10%;
+}
+
+#helpimage {
+    display: inline-block;
+    height: 300px;
+    margin: 0;
+}
+
+#innerplayerimage {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#innerhelpimage {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#button-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#right-button {
+    margin-left: 25px;
 }
