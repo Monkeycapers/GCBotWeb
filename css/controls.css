@@ -6,6 +6,7 @@
     border: 1px #45a8d3 solid;
     border-radius: 4.8px;
     margin-top: -20px;
+    text-decoration: none;
 }
 
 .button1:hover {
