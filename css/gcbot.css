@@ -62,7 +62,7 @@ body {
     padding: 25px;
     flex: 1 1 0;
     text-align: middle;
-    min-width: 10em;
+    min-width: 200px;
 }
 
 #promo {
