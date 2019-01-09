@@ -32,13 +32,13 @@ body {
 }
 
 #gcbot {
-    font-size: 50px;
+    font-size: 3.125em;
     text-align: center;
     float: left;
 }
 
 #gcbot-sub {
-    font-size: 15px;
+    font-size: 0.3em;
     color:   #353535;
     text-align: center;
     margin-left: 0px;
@@ -62,10 +62,12 @@ body {
     padding: 25px;
     flex: 1 1 0;
     text-align: middle;
+    min-width: 10em;
 }
 
 #promo {
     display:flex;
+    flex-wrap: wrap;
     margin-top: 0;
     width: 100%;
 }
@@ -102,7 +104,7 @@ body {
 }
 
 .main-header {
-    font-size: 30px;
+    font-size: 1.8em;
     width: 100%;
     padding-left: 0px;
     margin: 0;
@@ -139,7 +141,7 @@ body {
 #playerimage {
     display: inline-block;
     height: 300px;
-    margin-left: 10%;
+    margin-left: 5em;
 }
 
 #helpimage {
