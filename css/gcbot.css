@@ -9,8 +9,15 @@ body {
 
 #main-container {
     margin-top: 50px;
-    width:70%;
-    margin-left: 15%;
+    width: 95%;
+    margin-left: 2%;
+}
+
+@media (min-width: 800px) {
+    #main-container {
+        width:70%;
+        margin-left: 15%;
+    }
 }
 
 #header {
