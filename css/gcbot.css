@@ -185,3 +185,39 @@ body {
 #content {
     margin-top: -4px;
 }
+
+
+
+
+#goback {
+    margin-top: 10px;
+}
+
+.small-githubimage {
+    max-height: 25px;
+}
+
+.small-github {
+    display: inline-block;
+}
+
+.plugin {
+    margin-top: 15px;
+}
+
+.plugin-head {
+    font-size: 30px;
+}
+
+.plugin-head-sub {
+    font-size: 16px;
+    color: #353535;
+}
+
+.plugin-head p {
+    font-size: 16px;
+}
+
+.command {
+    font-size: 16px;
+}

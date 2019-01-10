@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>GCBot</title>
+    <meta name="description" content="Website for the GCBot library">
+    <meta name="author" content="Evan Jesty and Ryan Ly">
+
+    <link rel="stylesheet" href="css/gcbot.css">
+    <link rel="stylesheet" href="css/controls.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div id="main-container">
+        <div id="header">
+            <div id="gcbot">GCBot<span id="gcbot-sub"> plugins</span>
+            </div>
+            <div id="github"><a href='https://github.com/Monkeycapers/GCBot/' id ='github'><img src="image/github.png" class ='githubimage'></a></div>
+        </div>
+        <div id="content">
+            <div id="goback">
+                <a href = "index.html">Go Back</a>
+            </div>
+            <div id="pluginlist">
+                <div id = "player" class = "plugin">
+                    <div class = "plugin-head">
+                        <span>Music Player</span><span class = "plugin-head-sub"> by Evan Jesty</span>
+                        <div class="small-github"><a href='https://github.com/Monkeycapers/GCBot/' class ='small-github-link'><img src="image/github.png" class ='small-githubimage'></a></div>
+                        <p>
+                            The music player plays music from any youtube-dl supported site in voice channels.
+
+                            Please read the readme on the projects <a href='https://github.com/Monkeycapers/GCBot/'>github</a> page for configuration details.
+                        </p>
+                        <p>
+                            Commands:
+                        </p>
+
+                        <div class = "command">
+                            <ul>
+                                <li>play [url] - Plays a youtube url</li>
+                                <li>play [search_query] - Searches youtube and plays the first result for the search query</li>
+                                <li>playurl [url] - Plays any youtube-dl supported url</li>
+                                <li>disconnect - Stop playing and leave the voice channel</li>
+                                <li>join [channel] - Join the specified voice channel</li>
+                                <li>summon - Join the calling user's voice channel</li>
+                                <li>vol [volume] - Sets the volume for the voice player, from 0-100 </li>
+                                <li>playlist - Display the playlist</li>
+                                <li>playlist remove [index] - Remove the item from the playlist</li>
+                                <li>playlist move [index] [newindex] - Moves the item from the specified index to the new index</li>
+                                <li>playlist inspect [index] - Inspect the item at the specified index</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div id = "plugin manager" class = "plugin">
+                        <div class = "plugin-head">
+                            <span>Plugin Manager</span><span class = "plugin-head-sub"> by Evan Jesty and Ryan Ly</span>
+                            <div class="small-github"><a href='https://github.com/Monkeycapers/GCBot/' class ='small-github-link'><img src="image/github.png" class ='small-githubimage'></a></div>
+                            <p>
+                                The plugin manager allows you to load, unload and reload plugins dynamically.
+                            </p>
+                            <p>
+                                Commands:
+                            </p>
+    
+                            <div class = "command">
+                                <ul>
+                                    <li>loadplugin [plugin_name] - Loads plugin from the module plugin_name; if the plugin is already loaded it will reload it</li>
+                                    <li>unloadplugin [plugin_name] - Unloads plugin who's module name is plugin_name</li>
+                                    <li>listplugins - Lists all loaded plugins</li>
+                                    <li>enable_command [plugin_name] [command_name] - Enables the command from plugin_name</li>
+                                    <li>disable_command [command_name] - Disables the command</li>
+                                    <li>stop - Stops the bot</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                </div>
+
+                <div id = "spoiler" class = "plugin">
+                    <div class = "plugin-head">
+                        <span>Spoiler</span><span class = "plugin-head-sub"> by Ryan Ly</span>
+                        <div class="small-github"><a href='https://github.com/Monkeycapers/GCBot/' class ='small-github-link'><img src="image/github.png" class ='small-githubimage'></a></div>
+                        <p>
+                            Hides spoiler-y text (Make sure autoplay gifs is disabled!)
+                        </p>
+                        <p>
+                            spoiler [text] - Creates a spoiler with the specified text
+                        </p>
+                    </div>
+                </div>
+
+                <div id = "pinglist" class = "plugin">
+                    <div class = "plugin-head">
+                        <span>Ping List</span><span class = "plugin-head-sub"> by Ryan Ly</span>
+                        <div class="small-github"><a href='https://github.com/Monkeycapers/GCBot/' class ='small-github-link'><img src="image/github.png" class ='small-githubimage'></a></div>
+                        <p>
+                            Defines a list of users to be pinged at the same time <br>
+                            (e.g. to ping all players of a specific game)
+                        </p>
+                        <div class = "command">
+                            <ul>
+                                <li>ping list - Lists all ping lists</li>
+                                <li>ping [list] - Pings all user in the list</li>
+                                <li>ping add [list] - Creates a new ping list</li>
+                                <li>ping remove [list] - Removes a ping list</li>
+                                <li>ping [list] list - Lists all users in list</li>
+                                <li>ping [list] add [users] - Adds users to list</li>
+                                <li>ping [list] remove [users] - Removes user from list</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id = "admin" class = "plugin">
+                        <div class = "plugin-head">
+                            <span>Admin Utilities</span><span class = "plugin-head-sub"> by Ryan Ly</span>
+                            <div class="small-github"><a href='https://github.com/Monkeycapers/GCBot/' class ='small-github-link'><img src="image/github.png" class ='small-githubimage'></a></div>
+                            <p>
+                                Some Utilities that aid in managing a discord server
+                            </p>
+                            <p>
+                                Autorole - Defines roles to be added on user join
+                            </p>
+                            <div class = "command">
+                                <ul>
+                                    <li>autorole list - Lists all autoroles</li>
+                                    <li>autorole add [autorole_name] - Adds an autorole named role_name</li>
+                                    <li>autorole remove [autorole_name] - Removes the specified autorole</li>
+                                </ul>
+                            </div>
+                            <p>
+                                Purge - Deletes messages
+                            </p>
+                            <p>
+                                purge [user (optional)] [number] - Purses number messages. If user is defined, only messages from user will be deleted.
+                            </p>
+                        </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
