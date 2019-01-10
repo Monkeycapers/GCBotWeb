@@ -9,14 +9,15 @@ body {
 
 #main-container {
     margin-top: 50px;
-    width: 95%;
-    margin-left: 2%;
+    width: 70%;
+    margin-left: 15%;
 }
 
-@media (min-width: 800px) {
+@media screen and (max-device-width: 734px ), screen and (max-width: 734px) {
     #main-container {
-        width:70%;
-        margin-left: 15%;
+        margin-top: 50px;
+        width: 95%;
+        margin-left: 2%;
     }
 }
 
