@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>GCBot</title>
+    <meta name="description" content="Website for the GCBot library">
+    <meta name="author" content="Evan Jesty and Ryan Ly">
+
+    <link rel="stylesheet" href="css/gcbot.css">
+    <link rel="stylesheet" href="css/controls.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div id="main-container">
+        <div id="header">
+            <div id="gcbot">GCBot<span id="gcbot-sub"> documentation</span>
+            </div>
+            <div id="github"><a href='https://github.com/Monkeycapers/GCBot/' id ='github'><img src="image/github.png" class ='githubimage'></a></div>
+        </div>
+        <div id="content">
+            <div id="goback">
+                <a href = "index.html">Go Back</a>
+            </div>
+
+            <div id="docs" class="docs">
+                 <div id="getting-started" class="docs-section">
+                    <span>Getting Started</span>
+                    
+                    <div id="before-installing" class="docs-subsection">
+                        <span>Before Installing</span>
+                        <div class="docs-content">
+                            <p>Welcome to using GCBot! Before you can start using the bot, there are a few prerequisites that you'll need to install. 
+                                (The installation information is also on the GitHub page, if you'd rather just get it up and running without all the details. Just click the little GitHub icon in the top right corner.) </p>
+                            <p>The following are required for <strong>ALL</strong> installs. GCBot is built using the discord.py wrapper, which runs off of Python. Both must be installed.</p>
+                            <ul>
+                                <li><a href="https://www.python.org">Python 3.4.2+</a> - Use any version between 3.4.2 and 3.6.8, since Python 3.7.0 breaks some async features of discord.py</li>
+                                <li><a href="https://github.com/Rapptz/discord.py">discord.py</a> - Make sure to read discord.py's GitHub page as well for installation instructions.</li>
+                            </ul>
+
+                            <p>If you want to use the included music player, then you'll also need the following. (If you're making your own, chances are you'll be using these libraries or similar).</p>
+                            <ul>
+                                <li><a href="https://www.ffmpeg.org/">ffmpeg</a> - Used for playing the music</li>
+                                <li><a href="http://rg3.github.io/youtube-dl/">youtubedl</a> - Used for downloading the music to a local directory so that the bot can play it (streaming music doesn't tend to work very well!)</li>
+                                <li><a href="https://developers.google.com/api-client-library/python/">Google Api Client</a> - Used for YouTube searches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="installation" class="docs-subsection">
+                    <span>Setting Up and Running</span>
+                    <div class="docs-content">
+                        <p>Once you've installed all of the prerequisites, you're ready to download the bot and start using it!</p>
+                        <ol>
+                            <li><a href="https://github.com/Monkeycapers/GCBot/releases">Download the bot</a> and extract it.</li>
+                            <li>Create a bot user. <a href="https://discordpy.readthedocs.io/en/rewrite/discord.html">Details on how this can be done can be found here.</a></li>
+                            <li>Set up your settings in settings.txt. Currently, there only needs one line: <br>
+                                token=<i>your token here</i>
+                            </li>
+                            <li>Run the bot! You can do this by running <i>start.bat</i> or by running the command <i>python main.py</i>.</li> 
+
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="usage" class="docs-subsection">
+                    <span>Using the Bot</span>
+                    <div class="docs-content">
+                        <p>Once the bot is up and running, you'll need to install some plugins for the bot to actually do things. Not all included plugins are automatically installed.
+                            Refer to <a href="https://monkeycapers.github.io/GCBotWeb/plugins.html#plugin%20manager">the Plugin Manager plugin</a> for the full list of commands that can be used.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="developing-plugins" class="docs-section">
+                    <span>Developing Your Own Plugins</span>
+                    <div class="docs-content">
+                        <p>If you know some Python, you can write your own plugins to customize GCBot for whatever your server needs.
+                            Other than this page, there are a few other pages of documentation that are useful:
+                        </p>
+                        <ul>
+                            <li><a href="https://docs.python.org/3/">The official Python documentation</a></li>
+                            <li><a href="https://discordpy.readthedocs.io/en/latest/">discord.py documentation</a> - Since GCBot is built on discord.py, all of your functionality will be built using discord.py's functions.</li>
+                        </ul>
+                    </div>
+
+                    <div id="plugin-structure" class="docs-subsection">
+                        <span>Structure of a Plugin</span>
+                        
+                        <div class="docs-content">
+                            <p>A GCBot plugin has a specific structure that needs to be followed. Refer to the <a href="https://github.com/Monkeycapers/GCBot/blob/master/plugins/helloworld.py">Hello World plugin for a simple example of a plugin.</a></p>
+                            <p>Let's break it down:</p>
+                            <ul>
+                                <li>Imports - Every plugin must start with the following 2 import statements: <i>import discord</i> and <i>from bot import Bot</i>. 
+                                    The first imports the functions from the discord.py library that allow us to do things with the bot.
+                                    The second imports the bot from <i>bot.py</i>. This allows us to interact with the actual Bot object, which contains functionality like listeners and data persistence.</i></li>
+                                <li><i>name = 'helloworld'</i> - This defines what the name of the plugin is. This will be what is used to load the plugin in your server, and is how the server tracks what plugins are loaded.</li>
+                                <li><i>core_plugin = False</i> - True or False. If True, the plugin <b>will not</b> be able to be unloaded permanently. In other words, it specifies if the plugin is critical for the functionality of either the bot or your server.
+                                    Note that this does not affect hot reloads (i.e. the plugin can still be restarted).</li>
+                                <li><i>async def init(bot):</i> - The "constructor" of the plugin. Returns void. This function is called when the plugin is loaded. This is useful for things initializing values, loading data, etc.</li>
+                                <li><i>async def destroy(bot):</i> - The "destructor" of the plugin. Returns void. This function is called when the plugin is unloaded. This is useful for cleaning up data, saving data, etc.</li>
+                                <li><i>async def helloworld(message, bot):</i> - This is the meat of the plugin. <strong>IMPORTANT: The function's name is the name of the command.</strong> For example, in this case, the code in the function will be triggered by the command <i>?helloworld</i>.
+                                    There can be as many of these functions as you want, depending on how many commands you want your plugin to have. Returns void.
+                                </li>
+                                <li><i>def getcommands():</i> - Returns a list of functions. This tells the bot what commands the plugin has. As clarification, a command is the single word that follows the trigger. For example, <i>?helloworld</i> and <i>?helloworld parameter</i> are both considered the same command.
+                                    The list returned must contain a function in order for that function's command to work. If you include a function that is not implemented and the functioin is called, the bot will crash. 
+                                </li>
+                            </ul>
+                            <p>Note: any references to <i>bot</i> as a parameter, it represents the bot object, which is used for interacting with the server.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="troubleshooting" class="docs-section">
+                    <span>Troubleshooting</span>
+                    <div class="docs-content">
+                        <p>WIP. For now, if you encounter any issues, feel free to make a post on <a href="https://github.com/Monkeycapers/GCBot/issues">the Issues page on GitHub.</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+</body>

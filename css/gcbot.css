@@ -187,7 +187,7 @@ body {
 }
 
 
-
+/* Plugins */
 
 #goback {
     margin-top: 10px;
@@ -219,5 +219,25 @@ body {
 }
 
 .command {
+    font-size: 16px;
+}
+
+/* Documentation */
+.docs{
+    margin-top: 15px;
+}
+
+.docs-section {
+    font-size: 36px;
+    margin-top: 15px;
+}
+
+.docs-subsection {
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.docs-content {
     font-size: 16px;
 }
